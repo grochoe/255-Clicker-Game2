@@ -19,6 +19,8 @@
 		 */
 		public function Game() {
 			
+			var bgMusic:Sound01 = new Sound01();
+			bgMusic.play();
 			addEventListener(Event.ENTER_FRAME, gameLoop);
 		}
 		/**
@@ -31,6 +33,8 @@
 			spawnSnow();
 			
 			updateSnow();
+			
+			checkGameOver();
 			
 			
 		} // function gameLoop
@@ -68,7 +72,11 @@
 					snowflakes.splice(i, 1);
 				}
 			} // for loop updating snow
-		}
+		}// end updateSnow
+		
+		private function checkGameOver(){
+			trace("HelloWorld");
+		}//end checkGameOver
 		
 	} // class Game
 } // package
